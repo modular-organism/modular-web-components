@@ -7,8 +7,8 @@
     "declarationMap": true,
     "sourceMap": true,
     "inlineSources": true,
-    "outDir": "./",
-    "rootDir": "./src",
+    "outDir": "./dist",
+    "rootDirs": ["./src", "./test"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -28,6 +28,6 @@
       }
     ]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": []
+  "include": ["src/**/*.ts", "test/**/*_test.ts"],
+  "exclude": ["src/**/*.stories.ts"]
 }

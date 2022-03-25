@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "description": "modular web components",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "main": "",
+  "module": "",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -30,7 +30,9 @@
     "test:watch": "wtr --watch",
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js"
+    "checksize": "rollup -c ; cat my-element.bundled.js | gzip -9 | wc -c ; rm my-element.bundled.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "web-components",
@@ -38,7 +40,7 @@
     "typescript",
     "lit"
   ],
-  "author": "Google LLC",
+  "author": "szasza",
   "license": "BSD-3-Clause",
   "dependencies": {
     "lit": "^2.0.0"
@@ -46,12 +48,19 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@babel/core": "^7.17.5",
     "@custom-elements-manifest/analyzer": "^0.5.3",
     "@esm-bundle/chai": "^4.1.5",
     "@open-wc/testing": "^3.0.0-next.1",
     "@open-wc/testing-karma": "^4.0.9",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
+    "@storybook/addon-a11y": "^6.4.19",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/web-components": "^6.4.19",
     "@types/mocha": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.30.0",
@@ -62,8 +71,10 @@
     "@web/test-runner-mocha": "^0.7.4",
     "@web/test-runner-playwright": "^0.8.4",
     "@webcomponents/webcomponentsjs": "^2.6.0",
+    "babel-loader": "^8.2.3",
     "deepmerge": "^4.2.2",
     "eslint": "^7.32.0",
+    "eslint-plugin-storybook": "^0.5.7",
     "lit-analyzer": "^1.1.10",
     "mocha": "^9.1.1",
     "prettier": "^2.3.2",
@@ -71,6 +82,7 @@
     "rollup": "^2.28.2",
     "rollup-plugin-summary": "^1.2.3",
     "rollup-plugin-terser": "^7.0.2",
+    "storybook-addon-designs": "^6.2.1",
     "typescript": "^4.3.5"
   },
   "customElements": "custom-elements.json"
